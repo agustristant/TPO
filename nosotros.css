@@ -1,0 +1,215 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    
+}
+
+body{
+    background-color: rgb(167, 179, 178);
+}
+
+#btn-menu {
+    display: none;
+}
+
+header label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-right: 1px solid #fff;
+}
+
+header label:hover {
+    cursor:pointer;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    border-right: 1px solid #fff;
+}
+
+.menu li:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.menu li a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.header {
+    grid-area: header;
+    background: #232424;
+/*     border: 1px solid black */
+}
+
+.menu {
+    grid-area: menu;
+}
+
+.main {
+    grid-area: main;
+    min-height: 300px;
+    min-width: 500px;
+}
+
+.aside {
+    grid-area: aside;
+}
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 0;
+    background: #666669;
+}
+
+.grid-container {
+    display: grid;
+    grid-template: 
+    "header header" 50px 
+    "main   aside"  1fr
+    "footer footer" 50px/
+    auto    350px ;
+}
+
+.texto1 {
+    grid-area: texto1;
+    font-family: 'Tiro Devanagari Marathi', serif;
+    font-size: 16px;
+}
+.texto2 {
+    grid-area: texto2;
+    font-family: 'Tiro Devanagari Marathi', serif;
+    font-size: 16px;
+    justify-content: center; 
+}
+.texto3 {
+    grid-area: texto3;
+    font-family: 'Tiro Devanagari Marathi', serif;
+    font-size: 16px;  
+}
+.imagen1 {
+    grid-area: imagen1;
+    height: 300px;   
+}
+
+.imagen2 {
+    grid-area: imagen2;
+    height: 300px;
+}
+.grid-container2 {
+    display: grid;
+    max-height: 800px;
+    grid-template:
+    "texto1 texto1 imagen1" auto
+    "imagen2 texto2 imagen1 " auto
+    "imagen2 texto3 texto3" auto/
+    auto     auto   auto;
+    grid-gap: 10px;
+    margin: 10px;
+}
+
+.mapa {
+    grid-area: mapa;
+}
+.p1 {
+    grid-area: p1;
+    font-family: 'Tiro Devanagari Marathi', serif;
+    font-size: 16px;
+}
+.p2 {
+    grid-area: p2;
+    font-family: 'Tiro Devanagari Marathi', serif;
+    font-size: 16px;
+}
+
+.aside {
+    display: grid;
+    padding: 15px ;
+    padding-top: 80px;
+    grid-template:
+    "mapa" 200px
+    "p1"   50px
+    "p2"  50px;
+}
+
+@media (max-width:600px){
+    header label {
+        display: block;
+    }
+    
+    .menu {
+        position: absolute;
+        background: #232424;
+        width: 70%;
+        margin-left: -700px;
+        transition: all 0.5s;
+    }
+    
+    .menu ul {
+        flex-direction: column;
+    }
+    
+    .menu li {
+        border-top: 1px solid #fff;
+    }
+    
+    #btn-menu:checked ~ .menu {
+        margin: 0;
+    }
+    .grid-container {
+        display: grid;
+        grid-template: 
+        "header" 50px 
+        "main"  500px
+        "aside"  
+        "footer" 50px;
+    }
+
+    .main {
+        min-width: 100%;
+    }
+    
+    .aside {
+        grid-area: aside;
+        min-width: 100%;
+        padding-left: 50px;
+    }
+}
+
+@media (max-width:1100px){
+.grid-container2 {
+    display: grid;
+    max-height: 800px;
+    grid-template:
+    "texto1 texto1 imagen1" auto
+    "texto2 texto2 imagen1 " auto
+    "imagen2 texto3 texto3" auto/
+    auto     auto   auto;
+    grid-gap: 10px;
+}
+
+.imagen1{
+    height: 200px;
+}
+.imagen2{
+    height: 200px;
+}
+}

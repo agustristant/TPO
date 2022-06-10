@@ -1,0 +1,170 @@
+html {
+    height: 100%;
+}
+
+/* body {
+    height: 100%;
+    
+} */
+
+body{
+    background-color: rgb(167, 179, 178);
+}
+
+#btn-menu {
+    display: none;
+}
+
+header label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-right: 1px solid #fff;
+}
+
+header label:hover {
+    cursor:pointer;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    border-right: 1px solid #fff;
+}
+
+.menu li:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.menu li a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.header {
+    grid-area: header;
+    background: #232424;
+    height: 50px;
+/*     border: 1px solid black */
+}
+
+.menu {
+    grid-area: menu;
+}
+
+.main {
+    grid-area: main;
+    min-height: 300px;
+    min-width: 500px;
+}
+
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 0;
+    background: #666669;
+    height: 50px;
+}
+
+
+.grid-container2 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.grid-container2 img{
+    height: 250px;
+}
+
+.main h2{
+    font-size: 40px;
+    font-family: 'Shadows Into Light', cursive;
+    text-align: center;
+    margin: 30px;
+}
+.item {
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    margin: 15px;
+    text-align: center;
+    width: 280px;
+
+}
+
+.item h3{
+    font-family: 'Tiro Devanagari Marathi', serif;
+    font-size: 20px;
+    font-weight: 800;
+    
+}
+.item p{
+    font-family: 'Tiro Devanagari Marathi', serif;
+    font-size: 16px;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template: 
+    "header"  
+    "main  "  
+    "footer";
+}
+
+@media (max-width:600px){
+    header label {
+        display: block;
+    }
+    
+    .menu {
+        position: absolute;
+        background: #232424;
+        width: 70%;
+        margin-left: -700px;
+        transition: all 0.5s;
+    }
+    
+    .menu ul {
+        flex-direction: column;
+    }
+    
+    .menu li {
+        border-top: 1px solid #fff;
+    }
+    
+    #btn-menu:checked ~ .menu {
+        margin: 0;
+    }
+    .grid-container {
+        display: grid;
+        grid-template: 
+        "header" 50px 
+        "main"  
+        "footer" 50px;
+    }
+
+    .main {
+        min-width: 100%;
+    }
+    
+    .aside {
+        grid-area: aside;
+        min-width: 100%;
+        padding-left: 50px;
+    }
+}

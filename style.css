@@ -1,0 +1,56 @@
+*{
+    /*padding: 0px;*/
+    box-sizing: border-box;
+}
+
+
+.menu {
+    left: auto;
+    position: relative;
+    top: auto;
+    width: auto;
+    display: inline-block;
+    margin: 0.5em 0 0.5em 1em;
+}
+
+.menu ul{
+    list-style: none;
+}
+
+.menu a{
+ /*    float: left; */
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    padding: 0.5em;
+    height: 35px;
+    width: 60px;
+    border: 1px solid red;
+    /* border-radius: 7px;
+    background-color: #208aaa; */
+}
+
+.menu a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu a:hover {
+    color: gray;
+    font-size: 18px;
+}
+
+
+header label{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-right: 1px solid #fff;
+}
+
+.div-flex {
+    display: flex;
+    background: green;
+
+}

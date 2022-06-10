@@ -1,0 +1,159 @@
+
+html {
+    height: 100%;
+}
+
+/* body {
+    height: 100%;
+    
+} */
+
+body{
+    background-color: rgb(167, 179, 178);
+}
+
+#btn-menu {
+    display: none;
+}
+
+header label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-right: 1px solid #fff;
+}
+
+header label:hover {
+    cursor:pointer;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    border-right: 1px solid #fff;
+}
+
+.menu li:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.menu li a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.header {
+    grid-area: header;
+    background: #232424;
+/*     border: 1px solid black */
+}
+
+.menu {
+    grid-area: menu;
+}
+
+.main {
+    grid-area: main;
+    min-height: 300px;
+    background-color: rgb(167, 179, 178);
+}
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 0;
+    background: #666669;
+}
+
+
+.section {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: rgb(167, 179, 178);
+}
+
+.div2 {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+ }
+
+div > h2 {
+    font-size: 36px;
+    font-family: 'Shadows Into Light', cursive;
+}
+#fondo {
+    width: 800px;
+    height: 400px;
+    background-image: url(img/patio.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Tiro Devanagari Marathi', serif;
+    font-size: 14px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template: 
+    "header"
+    "main"   
+    "footer" ;
+}
+
+
+@media (max-width:600px){
+    header label {
+        display: block;
+    }
+    
+    .menu {
+        position: absolute;
+        background: #232424;
+        width: 70%;
+        margin-left: -700px;
+        transition: all 0.5s;
+    }
+    
+    .menu ul {
+        flex-direction: column;
+    }
+    
+    .menu li {
+        border-top: 1px solid #fff;
+    }
+    
+    #btn-menu:checked ~ .menu {
+        margin: 0;
+    }
+    
+}
+
+
+@media (min-width: 900px){
+   .texto {
+       font-size: 16px;
+   }
+
+   div > h2 {
+    font-size: 46px;
+} 
+}

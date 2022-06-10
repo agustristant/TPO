@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="styleform.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Tiro+Devanagari+Marathi:ital@1&display=swap" rel="stylesheet">
+</head>
+<body class="grid-container">
+    <header class="header">
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu"><img src="img/menu2.png" alt="" width="30px">
+        </label>
+        <nav class="menu"> 
+            <ul>
+              <li><a href="index.html" >Inicio </a></li>
+             <li><a href="productos.html" >Productos</a></li>
+                <li><a href="nosotros.html" >Nosotros</a></li>
+             <li><a href="formulario.html" >Contacto</a></li>
+            </ul>
+         </nav>
+    </header>
+
+    <div class="form">
+        <form action="" name="formv" >
+            <h2>Contacto</h2>
+            <input type="text" size="30" name="name" id="name" placeholder="Nombre">
+            <input type="email" name="mail" id="mail" placeholder="Correo">
+            <textarea name="mesagge" id="mesagge" placeholder="Escriba su mensaje aqui..."></textarea>
+            <input type="button" value="Enviar" onclick="valida_envia()">
+        </form>
+    </div>
+
+    <script>
+       function valida_envia() {
+       
+        /* Validacion del nombre */
+        if (document.formv.name.value.length == 0) {
+        alert("Tiene que escribir su nombre")
+        document.formv.name.focus()
+        return 0;
+        }
+        /* Validacion del correo */
+        var expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+        var esValido=expReg.test(document.formv.mail.value)
+        if (esValido==false) {
+        alert("El correo electronico no es valido")
+        document.formv.mail.focus()
+        return 0;
+        }
+        /* Validacion del mensaje */
+        if (document.formv.mesagge.value.length == 0) {
+        alert("Escribir mensaje para enviar")
+        document.formv.mesagge.focus()
+        return 0;
+        }
+    }
+
+    </script>
+    <footer class="footer">
+        <div><img src="img/facebook.png" alt="facebook" height="30px"></div>
+        <div>Lasalu deco</div>
+        <div><img src="img/ig.jpg" alt="instagram" height="30px"></div>
+        <div>@lasalu</div>
+        <div><img src="img/twitter.png" alt="twitter" height="30px"></div>
+        <div>@lasalu</div>
+    </footer>
+</body>
+</html>
+
